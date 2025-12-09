@@ -17,8 +17,8 @@ import java.util.UUID;
 public class User {
     
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @GeneratedValue(generator = "uuid-v7")
+    @GenericGenerator(name = "uuid-v7", type = com.timekeeping.timekeeping.config.UuidV7Generator.class)
     @Column(name = "id", columnDefinition = "BINARY(16)")
     private UUID id;
     
